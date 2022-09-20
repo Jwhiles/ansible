@@ -1,0 +1,18 @@
+# - name: scripts repo
+#   git:
+#     repo: git@github.com:adamchainz/chainz-scripts.git
+#     dest: ~/script
+#     update: false
+
+# - name: iTerm custom settings file
+#   osx_defaults:
+#     domain: com.googlecode.iterm2
+#     key: PrefsCustomFolder
+#     type: string
+#     value: "{{ ansible_env.PWD }}/roles/adam_mac/files"
+
+# - name: Cowsay cowfile
+#   file:
+#     src: '{{ ansible_env.PWD }}/roles/adam_mac/files/two-heads.cow'
+#     dest: /opt/homebrew/Cellar/cowsay/3.04_1/share/cows/two-heads.cow
+#     state: link

@@ -1,0 +1,21 @@
+- name: Basic settings
+  import_tasks: basic_settings.yml
+
+- name: Install homebrew
+  import_tasks: homebrew.yml
+
+- name: Install python
+  import_tasks: python.yml
+
+- name: Link in dotfiles
+  import_tasks: dotfiles.yml
+  tags:
+  - dotfiles
+
+# - name: Copy in/clone app settings
+#   import_tasks: app_settings.yml
+
+# - name: Cron settings
+#   import_tasks: cron.yml
+#   tags:
+#   - cron

@@ -1,0 +1,26 @@
+- name: dotfiles dirs
+  file:
+    path: '~/.{{ item }}'
+    state: directory
+  loop:
+  - config
+  - config/pip
+  tags:
+  - dotfiles
+
+- name: dotfiles links
+  file:
+    src: '{{ ansible_env.PWD }}/roles/john_mac/files/dotfiles/{{ item }}'
+    path: '~/.{{ item }}'
+    state: link
+  loop:
+  - config/pip/pip.conf
+  - config/starship.toml
+  - ssh/config
+  - ansible.cfg
+  - gitconfig
+  - gitignore_global
+  - inputrc
+  tags:
+  - dotfiles
+

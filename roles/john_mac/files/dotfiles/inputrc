@@ -1,7 +1,3 @@
-# Up/down = previous/next matching command (with prefix)
-"\e[A": history-search-backward
-"\e[B": history-search-forward
-
 # Perform completion in a case insensitive fashion
 set completion-ignore-case on
 
