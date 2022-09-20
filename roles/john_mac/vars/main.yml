@@ -48,8 +48,8 @@ homebrew_packages:
 # - postgresql
 # - pre-commit
 # - pwgen
-# - pyenv
-# - python
+- pyenv
+- python
 # - qpdf
 # - readline
 # - rg
@@ -70,27 +70,27 @@ homebrew_packages:
 # - zsh-completions
 
 homebrew_cask_packages:
-- anki
-- calibre
-# - discord
-- docker
-- firefox
-# - homebrew/cask-fonts/font-ubuntu-mono-nerd-font
-# - franz
-- iterm2
-# - istat-menus
-# - java
-# - karabiner-elements
-# - keyboard-maestro
-# - mactex
-- mplayerx
-# - paintbrush
-- rectangle
-# - skim
-- steam
-# - tableplus
-# - vagrant
-- vlc
+# # - anki
+# - calibre
+# # - discord
+# - docker
+# - firefox
+# # - homebrew/cask-fonts/font-ubuntu-mono-nerd-font
+# # - franz
+# - iterm2
+# # - istat-menus
+# # - java
+# # - karabiner-elements
+# # - keyboard-maestro
+# # - mactex
+# - mplayerx
+# # - paintbrush
+# - rectangle
+# # - skim
+# - steam
+# # - tableplus
+# # - vagrant
+# - vlc
 
 pyenv_python_versions:
 # In precedence order

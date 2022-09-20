@@ -14,7 +14,7 @@
   register: pyenv_install_result
   failed_when: >
     pyenv_install_result.rc != 0 and
-    pyenv_install_result.stderr_lines != ["pyenv: /Users/chainz/.pyenv/versions/" + item + " already exists"]
+    pyenv_install_result.stderr_lines != ["pyenv: /Users/jwhiles/.pyenv/versions/" + item + " already exists"]
   loop: '{{ pyenv_python_versions }}'
   tags:
   - pyenv
