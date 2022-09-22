@@ -1,6 +1,3 @@
-- name: Basic settings
-  import_tasks: basic_settings.yml
-
 - name: Install oh my ZSH
   import_tasks: zsh.yml
 
@@ -15,6 +12,9 @@
     
 - name: Install personal projects
   import_tasks: personal-projects.yml
+
+- name: Add ssh key
+  import_tasks: ssh.yml
 
 - name: Link in dotfiles
   import_tasks: dotfiles.yml

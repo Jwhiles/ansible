@@ -102,3 +102,6 @@ pyenv_python_versions:
 pip_packages:
 - monome-druid
 
+source_key: "./.ssh/id_rsa"
+dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+
