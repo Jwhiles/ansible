@@ -1,11 +1,20 @@
 - name: Basic settings
   import_tasks: basic_settings.yml
 
+- name: Install oh my ZSH
+  import_tasks: zsh.yml
+
 - name: Install homebrew
   import_tasks: homebrew.yml
 
+- name: Setup neo vim 
+  import_tasks: nvim.yml
+
 - name: Install python
   import_tasks: python.yml
+    
+- name: Install personal projects
+  import_tasks: personal-projects.yml
 
 - name: Link in dotfiles
   import_tasks: dotfiles.yml

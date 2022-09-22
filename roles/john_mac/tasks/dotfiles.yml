@@ -1,26 +1,19 @@
-- name: dotfiles dirs
-  file:
-    path: '~/.{{ item }}'
-    state: directory
-  loop:
-  - config
-  - config/pip
+- name: Cloning .dotfiles
+  ansible.builtin.git:
+    repo: 'git@github.com:Jwhiles/dotfiles-FKA-vimmy.git'
+    dest: "{{ lookup('env', 'HOME') }}/.dotfiles"
+    recursive: yes
+    update: yes
+    accept_hostkey: yes
+    version: master
   tags:
-  - dotfiles
-
-- name: dotfiles links
-  file:
-    src: '{{ ansible_env.PWD }}/roles/john_mac/files/dotfiles/{{ item }}'
-    path: '~/.{{ item }}'
-    state: link
-  loop:
-  - config/pip/pip.conf
-  - config/starship.toml
-  - ssh/config
-  - ansible.cfg
-  - gitconfig
-  - gitignore_global
-  - inputrc
+    - install
+    - dotfiles
+    - stow
+- name: Stow dotfiles
+  shell: cd $HOME/.dotfiles && ./install
   tags:
-  - dotfiles
+    - install
+    - dotfiles
+    - stow
 

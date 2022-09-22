@@ -11,8 +11,3 @@
 #     type: string
 #     value: "{{ ansible_env.PWD }}/roles/adam_mac/files"
 
-# - name: Cowsay cowfile
-#   file:
-#     src: '{{ ansible_env.PWD }}/roles/adam_mac/files/two-heads.cow'
-#     dest: /opt/homebrew/Cellar/cowsay/3.04_1/share/cows/two-heads.cow
-#     state: link

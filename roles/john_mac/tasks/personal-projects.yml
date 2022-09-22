@@ -1,0 +1,18 @@
+- name: Personal Project Obsidian
+  ansible.builtin.git:
+    repo: 'git@github.com:Jwhiles/obsidian.git'
+    bare: false
+    dest: "{{ lookup('env', 'HOME') }}/Obsidian/obsidian"
+  tags:
+    - install
+    - personal-project
+
+- name: Personal Project johncom
+  ansible.builtin.git:
+    repo: 'git@github.com:Jwhiles/johncom.git'
+    bare: false
+    dest: "{{ lookup('env', 'HOME') }}/personal/johncom"
+  tags:
+    - install
+    - personal-project
+

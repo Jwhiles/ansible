@@ -36,6 +36,7 @@ homebrew_packages:
 # - libyaml
 # - memcached
 # - myrepos
+- neovim
 # - ncdu
 # - nginx
 - nvm
@@ -59,6 +60,7 @@ homebrew_packages:
 # - shellcheck
 # - sqlite
 - starship
+- stow
 # - swig
 - tmux
 - tree
@@ -70,27 +72,28 @@ homebrew_packages:
 # - zsh-completions
 
 homebrew_cask_packages:
-# # - anki
-# - calibre
-# # - discord
-# - docker
-# - firefox
-# # - homebrew/cask-fonts/font-ubuntu-mono-nerd-font
-# # - franz
-# - iterm2
-# # - istat-menus
-# # - java
-# # - karabiner-elements
-# # - keyboard-maestro
-# # - mactex
+# - anki
+- calibre
+# - discord
+- docker
+- firefox
+# - homebrew/cask-fonts/font-ubuntu-mono-nerd-font
+# - franz
+- iterm2
+# - istat-menus
+# - java
+# - karabiner-elements
+# - keyboard-maestro
+# - mactex
 # - mplayerx
-# # - paintbrush
-# - rectangle
-# # - skim
-# - steam
-# # - tableplus
-# # - vagrant
-# - vlc
+- obsidian
+# - paintbrush
+- rectangle
+# - skim
+- steam
+# - tableplus
+# - vagrant
+- vlc
 
 pyenv_python_versions:
 # In precedence order
@@ -98,3 +101,4 @@ pyenv_python_versions:
 
 pip_packages:
 - monome-druid
+
