@@ -1,5 +1,8 @@
-- name: Install oh my ZSH
-  import_tasks: zsh.yml
+- name: Add ssh key
+  import_tasks: ssh.yml
+
+    # - name: Install oh my ZSH
+    # import_tasks: zsh.yml
 
 - name: Install homebrew
   import_tasks: homebrew.yml
@@ -13,18 +16,14 @@
 - name: Install personal projects
   import_tasks: personal-projects.yml
 
-- name: Add ssh key
-  import_tasks: ssh.yml
-
 - name: Link in dotfiles
   import_tasks: dotfiles.yml
   tags:
   - dotfiles
 
+- name: Setup cronjobs
+  import_tasks: cron.yml
+
 # - name: Copy in/clone app settings
 #   import_tasks: app_settings.yml
 
-# - name: Cron settings
-#   import_tasks: cron.yml
-#   tags:
-#   - cron

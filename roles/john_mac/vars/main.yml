@@ -10,6 +10,7 @@ homebrew_packages:
 # - exiftool
 # - fd
 # - fdupes
+- fzf
 - ffmpeg
 # - freetype
 # - fswatch
@@ -42,27 +43,24 @@ homebrew_packages:
 - nvm
 # - openssl
 # - ossp-uuid
-# - pandoc
-# - parallel
-# - percona-toolkit
-# - pkg-config
-# - postgresql
-# - pre-commit
-# - pwgen
+- overmind
 - pyenv
 - python
 # - qpdf
 # - readline
-# - rg
+- rg
 # - rsync
 # - rtmpdump
 # - sd
 # - shellcheck
 # - sqlite
+- spotifyd
+- spotify-tui
 - starship
 - stow
 # - swig
 - tmux
+- tmuxinator
 - tree
 # - watch
 # - watchman
@@ -72,35 +70,23 @@ homebrew_packages:
 # - zsh-completions
 
 homebrew_cask_packages:
-# - anki
+- 1password
+- anki
 - calibre
-# - discord
 - docker
 - firefox
-# - homebrew/cask-fonts/font-ubuntu-mono-nerd-font
-# - franz
+- homebrew/cask-fonts/font-inconsolata-nerd-font
+- homebrew/cask-fonts/font-iosevka-nerd-font
+- homebrew/cask-fonts/font-daddy-time-mono-nerd-font 
 - iterm2
-# - istat-menus
-# - java
-# - karabiner-elements
-# - keyboard-maestro
-# - mactex
-# - mplayerx
 - obsidian
-# - paintbrush
 - rectangle
-# - skim
 - steam
-# - tableplus
-# - vagrant
 - vlc
 
 pyenv_python_versions:
 # In precedence order
 - 3.10.7
-
-pip_packages:
-- monome-druid
 
 source_key: "./.ssh/id_rsa"
 dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
