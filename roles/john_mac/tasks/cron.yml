@@ -13,7 +13,7 @@
   tags:
   - cronjob
 
-- name: lifelogger download
+- name: Obsidian syncer
   cron:
     minute: '5'
     name: Sync Obsidian

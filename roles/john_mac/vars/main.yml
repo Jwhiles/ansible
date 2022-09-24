@@ -24,6 +24,7 @@ homebrew_cask_packages:
 - calibre
 - darktable
 - docker
+- dropbox
 - firefox
 - homebrew/cask-fonts/font-inconsolata-nerd-font
 - homebrew/cask-fonts/font-iosevka-nerd-font
@@ -34,9 +35,9 @@ homebrew_cask_packages:
 - steam
 - vlc
 
-pyenv_python_versions:
+node_versions:
 # In precedence order
-- 3.10.7
+- 18.9.1
 
 source_key: "./.ssh/id_rsa"
 dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"

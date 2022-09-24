@@ -10,6 +10,9 @@
 - name: Setup neo vim 
   import_tasks: nvim.yml
 
+- name: Install node
+  import_tasks: node.yml
+
 - name: Install python
   import_tasks: python.yml
     
