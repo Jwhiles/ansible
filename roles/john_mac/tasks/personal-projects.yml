@@ -1,4 +1,4 @@
-- name: Personal Project Obsidian
+- name: Clone Obsidian
   ansible.builtin.git:
     repo: 'git@github.com:Jwhiles/obsidian.git'
     bare: false
@@ -7,11 +7,20 @@
     - install
     - personal-project
 
-- name: Personal Project johncom
+- name: Clone johncom
   ansible.builtin.git:
     repo: 'git@github.com:Jwhiles/johncom.git'
     bare: false
     dest: "{{ lookup('env', 'HOME') }}/personal/johncom"
+  tags:
+    - install
+    - personal-project
+
+- name: Clone crowland
+  ansible.builtin.git:
+    repo: 'git@github.com:Jwhiles/crowland.git'
+    bare: false
+    dest: "{{ lookup('env', 'HOME') }}/personal/crowland"
   tags:
     - install
     - personal-project
