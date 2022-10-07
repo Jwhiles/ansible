@@ -1,13 +1,13 @@
-- name: Check that the somefile.conf exists
+- name: Check if it already has been installed
   stat:
-    path: /Users/jwhiles/.oh-my-zsh
-  register: oh_my_stats
+    path: /Users/john.whiles/.oh-my-zsh/oh-my-zsh.sh
+  register: omz
   tags: &tags_for_zsh_tasks [ 'install', 'productivity', 'dotfiles', 'zsh' ]
 
 - name: Oh-My-Zsh
   shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/.oh-my-installer && chmod +x ~/.oh-my-installer && ~/.oh-my-installer
   tags: *tags_for_zsh_tasks
-  when: oh_my_stats.stat.exists == False
+  when: omz.stat is not defined
   become_user: johns_mac
   
 # need to make sure dot files are updated to enable this

@@ -1,12 +1,59 @@
 #!/usr/bin/env ansible-playbook
 - hosts: localhost
-  connection: local
-  tasks:
-  - debug:
-      msg: Check we are running in the directory of the script
-    failed_when: not ansible_env.PWD.endswith('/ansible')
+  vars:
+    source_key: "./.ssh/id_rsa"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    homebrew_packages:
+    - fzf
+    - ffmpeg
+    - git
+    - jq
+    - neovim
+    - nvm
+    - overmind
+    - pyenv
+    - python
+    - rg
+    - spotifyd
+    - spotify-tui
+    - starship
+    - stow
+    - tmux
+    - tmuxinator
+    - tree
+    # - watchman
 
-- hosts: localhost
-  connection: local
-  roles:
-  - john_mac
+    homebrew_cask_packages:
+    # - 1password
+    - anki
+    - brave-browser
+    - calibre
+    - darktable
+    - docker
+    - dropbox
+    - firefox
+    - homebrew/cask-fonts/font-inconsolata-nerd-font
+    - homebrew/cask-fonts/font-iosevka-nerd-font
+    - homebrew/cask-fonts/font-daddy-time-mono-nerd-font 
+    - iterm2
+    - obsidian
+    - rectangle
+    - steam
+    - vlc
+
+    node_versions:
+    - 18.9.1
+
+    pyenv_python_versions:
+    - 3.10.7
+
+  tasks:
+    - include: tasks/ssh.yml
+    - include: tasks/zsh.yml
+    - include: tasks/homebrew.yml
+    - include: tasks/nvim.yml
+    - include: tasks/node.yml
+    # - include: tasks/python.yml
+    - include: tasks/personal-projects.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/cron.yml

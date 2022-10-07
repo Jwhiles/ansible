@@ -1,5 +1,4 @@
-# I'm assuming that Neovim will be installed through brew
-# To this is just about dem plugins
+# Neovim will be installed through brew
 
 - name: Get Packer
   ansible.builtin.git:
