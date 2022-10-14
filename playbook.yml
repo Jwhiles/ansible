@@ -21,11 +21,11 @@
     - tmux
     - tmuxinator
     - tree
-    # - watchman
 
     homebrew_cask_packages:
     # - 1password
     - anki
+    - alacritty
     - brave-browser
     - calibre
     - darktable
