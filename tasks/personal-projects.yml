@@ -2,7 +2,7 @@
   ansible.builtin.git:
     repo: 'git@github.com:Jwhiles/obsidian.git'
     bare: false
-    dest: "{{ lookup('env', 'HOME') }}/Obsidian/obsidian"
+    dest: "{{ lookup('env', 'HOME') }}/Obsidian"
   tags:
     - install
     - personal-project
