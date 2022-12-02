@@ -8,19 +8,20 @@
     - ffmpeg
     - git
     - jq
+    - kubectx
     - neovim
     - nvm
     - overmind
-    - pyenv
     - python
     - rg
-    - spotifyd
-    - spotify-tui
+    - ncspot
     - starship
     - stow
     - tmux
     - tmuxinator
     - tree
+    - exa # ls replacement
+    - zoxide # cd replacement
 
     homebrew_cask_packages:
     # - 1password
