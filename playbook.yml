@@ -22,6 +22,7 @@
     - tree
     - exa # ls replacement
     - zoxide # cd replacement
+    - flyctl
 
     homebrew_cask_packages:
     # - 1password
@@ -41,6 +42,8 @@
     - rectangle
     - steam
     - vlc
+    - anaconda
+
 
     node_versions:
     - 18.9.1
