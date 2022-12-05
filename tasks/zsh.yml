@@ -10,9 +10,14 @@
   when: omz.stat is not defined
   become_user: johns_mac
   
-# need to make sure dot files are updated to enable this
 - name: Install zsh-autosuggestions
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
     dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+  tags: *tags_for_zsh_tasks
+
+- name: Install zsh-fzf-history-search
+  ansible.builtin.git:
+    repo: 'git@github.com:joshskidmore/zsh-fzf-history-search.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-fzf-history-search"
   tags: *tags_for_zsh_tasks
