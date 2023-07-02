@@ -23,11 +23,11 @@
     - tmuxinator
     - tree
     - zoxide # cd replacement
+    - imagemagick
 
     homebrew_cask_packages:
     # - 1password
     - alacritty
-    - anaconda
     - anki
     - brave-browser
     - calibre
