@@ -24,6 +24,9 @@
     - tree
     - zoxide # cd replacement
     - imagemagick
+    - hashicorp/tap/terraform
+
+
 
     homebrew_cask_packages:
     # - 1password

@@ -6,6 +6,10 @@
   tags:
   - brew
 
+- name: Tap terraform
+  community.general.homebrew_tap:
+    name: hashicorp/tap
+
 - name: Install homebrew packages
   homebrew:
     name: '{{ homebrew_packages }}'
