@@ -46,6 +46,7 @@
     - rectangle
     - steam
     - vlc
+    - aws-vault
 
 
     node_versions:
