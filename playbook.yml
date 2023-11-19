@@ -25,6 +25,7 @@
     - zoxide # cd replacement
     - imagemagick
     - hashicorp/tap/terraform
+    - yt-dlp
 
 
 
