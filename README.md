@@ -9,9 +9,10 @@ and re-install with less effort. See ~my~ the [blog post](https://adamj.eu/tech/
 ```shell
 1. Install [homebrew](http://brew.sh/) with the command from the site
 2. Install the xcode command linetools
-3. Install ansible
-4. `make run`
-5. Open nvim and run `:PackerSync`
+3. Install ansible with `brew install ansible`
+4. Clone this repo into ~
+5. in this repo `make run` - entering the vault password
+6. Open nvim and run `:PackerSync`
 ```
 
 ------------------
