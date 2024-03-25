@@ -4,7 +4,7 @@
     state: latest
     update_homebrew: true
   tags:
-  - brew
+    - homebrew
 
 - name: Tap terraform
   community.general.homebrew_tap:
@@ -15,9 +15,10 @@
     name: '{{ homebrew_packages }}'
     state: latest
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew cask packages
   command: brew install {{ homebrew_cask_packages|join(" ") }}
   tags:
-  - brew
+    - brew
+    - cask

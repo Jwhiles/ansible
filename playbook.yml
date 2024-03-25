@@ -4,6 +4,7 @@
     source_key: "./.ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     homebrew_packages:
+    - asdf
     - eza # ls replacement
     - ffmpeg
     - flyctl
@@ -14,7 +15,6 @@
     - kubectx
     - ncspot
     - neovim
-    - nvm
     - overmind
     - python
     - rg
@@ -37,12 +37,12 @@
     - calibre
     - docker
     - dropbox
+    - raycast
     - firefox
     - homebrew/cask-fonts/font-daddy-time-mono-nerd-font 
     - homebrew/cask-fonts/font-inconsolata-nerd-font
     - homebrew/cask-fonts/font-iosevka-nerd-font
     - obsidian
-    - rectangle
     - vlc
 
 
@@ -53,12 +53,13 @@
     - 3.10.7
 
   tasks:
-    - include_tasks: tasks/ssh.yml
-    - include_tasks: tasks/zsh.yml
-    - include_tasks: tasks/homebrew.yml
-    - include_tasks: tasks/nvim.yml
-    - include_tasks: tasks/node.yml
-    # - include_tasks: tasks/python.yml
-    - include_tasks: tasks/personal-projects.yml
-    - include_tasks: tasks/dotfiles.yml
-    - include_tasks: tasks/cron.yml
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/zsh.yml
+    - import_tasks: tasks/homebrew.yml
+    - import_tasks: tasks/nvim.yml
+    - import_tasks: tasks/node.yml
+    # - import_tasks: tasks/python.yml
+    - import_tasks: tasks/personal-projects.yml
+    - import_tasks: tasks/dotfiles.yml
+    - import_tasks: tasks/cron.yml
+
