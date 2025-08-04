@@ -12,8 +12,8 @@
     - git
     - git-lfs
     - jq
+    - just
     - kubectx
-    - ncspot
     - neovim
     - overmind
     - python
