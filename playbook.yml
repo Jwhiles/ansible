@@ -9,13 +9,13 @@
     - ffmpeg
     - flyctl
     - fzf
+    - gh # github CLI so I can run `gh pr create`
     - git
     - git-lfs
     - jq
     - just
     - kubectx
     - neovim
-    - overmind
     - python
     - rg
     - starship
@@ -31,7 +31,6 @@
 
 
     homebrew_cask_packages:
-    # - 1password
     - alacritty
     - anki
     - calibre
@@ -48,7 +47,7 @@
 
 
     node_versions:
-    - 18.9.1
+    - 22.18.0
 
     pyenv_python_versions:
     - 3.10.7
